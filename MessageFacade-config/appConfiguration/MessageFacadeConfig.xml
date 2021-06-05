@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<MessageFacadeConfig>
+            <EndpointSOAP>http://desktop-t4t3n14:8080/MessageManager/GetMessagesByService</EndpointSOAP>
+            <EndpointREST>http://localhost:8080/MessageManager/api/message</EndpointREST>
+</MessageFacadeConfig>

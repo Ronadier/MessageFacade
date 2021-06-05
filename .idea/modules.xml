@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/MessageFacade.iml" filepath="$PROJECT_DIR$/MessageFacade.iml" />
+      <module fileurl="file://$PROJECT_DIR$/MessageFacade-config/MessageFacade-config.iml" filepath="$PROJECT_DIR$/MessageFacade-config/MessageFacade-config.iml" />
+      <module fileurl="file://$PROJECT_DIR$/MessageFacade-ear/MessageFacade-ear.iml" filepath="$PROJECT_DIR$/MessageFacade-ear/MessageFacade-ear.iml" />
+      <module fileurl="file://$PROJECT_DIR$/MessageFacade-ejb/MessageFacade-ejb.iml" filepath="$PROJECT_DIR$/MessageFacade-ejb/MessageFacade-ejb.iml" />
+    </modules>
+  </component>
+</project>
