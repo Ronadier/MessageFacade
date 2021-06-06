@@ -24,7 +24,6 @@ public class RestClient {
             e.printStackTrace();
         }
     }
-//    static final String endpoint = "http://192.168.70.181:7086/MessageManager-rest/resources/message";
 
     public static String deleteMessage(Message message) {
         return "SUCCESS";

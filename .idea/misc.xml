@@ -12,6 +12,7 @@
         <option value="$PROJECT_DIR$/MessageFacade-config/pom.xml" />
         <option value="$PROJECT_DIR$/MessageFacade-ejb/pom.xml" />
         <option value="$PROJECT_DIR$/MessageFacade-ear/pom.xml" />
+        <option value="$PROJECT_DIR$/MessageFacade-local/pom.xml" />
       </list>
     </option>
   </component>

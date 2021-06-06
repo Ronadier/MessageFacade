@@ -36,5 +36,6 @@
         <module>MessageFacade-ejb</module>
         <module>MessageFacade-config</module>
         <module>MessageFacade-ear</module>
+        <module>MessageFacade-local</module>
     </modules>
 </project>

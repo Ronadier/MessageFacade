@@ -16,11 +16,11 @@ import java.util.List;
 public class FacadeBean  implements MessageFacadeService{
     @Override
     public List<Message> getMessagesBySender(String sender) {
-        return SoapClient.getMessagesBySender(sender);
+        return new SoapSendRequest().getMessagesBySender(sender);
     }
     @Override
     public List<Message> getMessagesByDate(XMLGregorianCalendar sendTime) {
-        return SoapClient.getMessagesByDate(sendTime);
+        return new SoapSendRequest().getMessagesByDate(sendTime);
     }
     @Override
     public String deleteMessage(Message message) {

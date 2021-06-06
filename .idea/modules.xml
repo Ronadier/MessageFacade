@@ -6,6 +6,7 @@
       <module fileurl="file://$PROJECT_DIR$/MessageFacade-config/MessageFacade-config.iml" filepath="$PROJECT_DIR$/MessageFacade-config/MessageFacade-config.iml" />
       <module fileurl="file://$PROJECT_DIR$/MessageFacade-ear/MessageFacade-ear.iml" filepath="$PROJECT_DIR$/MessageFacade-ear/MessageFacade-ear.iml" />
       <module fileurl="file://$PROJECT_DIR$/MessageFacade-ejb/MessageFacade-ejb.iml" filepath="$PROJECT_DIR$/MessageFacade-ejb/MessageFacade-ejb.iml" />
+      <module fileurl="file://$PROJECT_DIR$/MessageFacade-local/MessageFacade-local.iml" filepath="$PROJECT_DIR$/MessageFacade-local/MessageFacade-local.iml" />
     </modules>
   </component>
 </project>

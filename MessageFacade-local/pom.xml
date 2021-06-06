@@ -3,20 +3,16 @@
          xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
     <modelVersion>4.0.0</modelVersion>
-    <parent>
-        <groupId>com.example</groupId>
-        <artifactId>MessageFacade</artifactId>
-        <version>1.0-SNAPSHOT</version>
-    </parent>
 
-    <artifactId>MessageFacade-ejb</artifactId>
-    <name>MessageFacade-ejb</name>
-    <packaging>ejb</packaging>
-
+    <groupId>com.example</groupId>
+    <artifactId>MessageFacade-local</artifactId>
+    <version>1.0-SNAPSHOT</version>
+    <name>MessageFacade-local</name>
 
     <properties>
         <maven.compiler.target>1.8</maven.compiler.target>
         <maven.compiler.source>1.8</maven.compiler.source>
+        <junit.version>5.7.1</junit.version>
     </properties>
 
     <dependencies>
@@ -26,39 +22,23 @@
             <version>${project.version}</version>
         </dependency>
         <dependency>
-            <groupId>${project.groupId}</groupId>
-            <artifactId>MessageFacade-local</artifactId>
-            <version>${project.version}</version>
+            <groupId>org.junit.jupiter</groupId>
+            <artifactId>junit-jupiter-api</artifactId>
+            <version>${junit.version}</version>
+            <scope>test</scope>
         </dependency>
         <dependency>
-            <groupId>org.apache.httpcomponents</groupId>
-            <artifactId>httpclient</artifactId>
-            <version>4.3</version>
+            <groupId>org.junit.jupiter</groupId>
+            <artifactId>junit-jupiter-engine</artifactId>
+            <version>${junit.version}</version>
+            <scope>test</scope>
         </dependency>
-        <dependency>
-            <groupId>com.google.code.gson</groupId>
-            <artifactId>gson</artifactId>
-            <version>2.1</version>
-        </dependency>
-        <dependency>
-            <groupId>javax</groupId>
-            <artifactId>javaee-api</artifactId>
-            <version>8.0.1</version>
-            <scope>provided</scope>
-        </dependency>
+
+
     </dependencies>
 
     <build>
         <plugins>
-
-            <plugin>
-                <groupId>org.apache.maven.plugins</groupId>
-                <artifactId>maven-ejb-plugin</artifactId>
-                <version>3.1.0</version>
-                <configuration>
-                    <ejbVersion>3.0</ejbVersion>
-                </configuration>
-            </plugin>
             <plugin>
                 <groupId>org.jvnet.jax-ws-commons</groupId>
                 <artifactId>jaxws-maven-plugin</artifactId>
@@ -70,14 +50,15 @@
                         </goals>
                         <configuration>
                             <wsdlFiles>
-                                <wsdlFile>FacadeBeanService.wsdl</wsdlFile>
+                                <wsdlFile>MessagesBeanService.wsdl</wsdlFile>
                             </wsdlFiles>
+                            <wsdlLocation>/src/wsdl/MessagesBeanService.wsdl</wsdlLocation>
+
                             <packageName></packageName>
                             <vmArgs>
                                 <vmArg>-Djavax.xml.accessExternalSchema=all</vmArg>
                             </vmArgs>
-                            <wsdlLocation>/src/wsdl/FacadeBeanService.wsdl</wsdlLocation>
-                            <staleFile>${project.build.directory}/jaxws/stale/FacadeBeanService.stale</staleFile>
+                            <staleFile>${project.build.directory}/jaxws/stale/MessageBeanService.stale</staleFile>
                         </configuration>
                         <id>wsimport-generate-convergent</id>
                         <phase>generate-sources</phase>
