@@ -60,7 +60,7 @@
                             </vmArgs>
                             <staleFile>${project.build.directory}/jaxws/stale/MessageBeanService.stale</staleFile>
                         </configuration>
-                        <id>wsimport-generate-convergent</id>
+                        <id>wsimport-generate-messages</id>
                         <phase>generate-sources</phase>
                     </execution>
                 </executions>

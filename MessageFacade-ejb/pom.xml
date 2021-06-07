@@ -79,7 +79,7 @@
                             <wsdlLocation>/src/wsdl/FacadeBeanService.wsdl</wsdlLocation>
                             <staleFile>${project.build.directory}/jaxws/stale/FacadeBeanService.stale</staleFile>
                         </configuration>
-                        <id>wsimport-generate-convergent</id>
+                        <id>wsimport-generate-messages</id>
                         <phase>generate-sources</phase>
                     </execution>
                 </executions>
