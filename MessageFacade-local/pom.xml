@@ -33,8 +33,12 @@
             <version>${junit.version}</version>
             <scope>test</scope>
         </dependency>
-
-
+        <dependency>
+            <groupId>javax</groupId>
+            <artifactId>javaee-api</artifactId>
+            <version>8.0.1</version>
+            <scope>compile</scope>
+        </dependency>
     </dependencies>
 
     <build>
@@ -50,15 +54,15 @@
                         </goals>
                         <configuration>
                             <wsdlFiles>
-                                <wsdlFile>MessagesBeanService.wsdl</wsdlFile>
+                                <wsdlFile>MessageManagerImplService.wsdl</wsdlFile>
                             </wsdlFiles>
-                            <wsdlLocation>/src/wsdl/MessagesBeanService.wsdl</wsdlLocation>
+                            <wsdlLocation>/src/wsdl/MessageManagerImplService.wsdl</wsdlLocation>
 
                             <packageName></packageName>
                             <vmArgs>
                                 <vmArg>-Djavax.xml.accessExternalSchema=all</vmArg>
                             </vmArgs>
-                            <staleFile>${project.build.directory}/jaxws/stale/MessageBeanService.stale</staleFile>
+                            <staleFile>${project.build.directory}/jaxws/stale/MessageManagerImplService.stale</staleFile>
                         </configuration>
                         <id>wsimport-generate-messages</id>
                         <phase>generate-sources</phase>

@@ -1,4 +1,4 @@
-package impl;
+package client;
 
 import com.google.gson.Gson;
 import com.google.gson.GsonBuilder;
@@ -12,6 +12,7 @@ import org.apache.http.impl.client.HttpClientBuilder;
 import org.apache.http.util.EntityUtils;
 import service.Message;
 
+
 import javax.xml.bind.JAXBException;
 import java.io.IOException;
 import java.io.UnsupportedEncodingException;
@@ -19,7 +20,6 @@ import java.io.UnsupportedEncodingException;
 public class RestClient {
     private static String endpoint;
     private static final HttpClient httpClient = HttpClientBuilder.create().build();
-
 
     static {
         try {
@@ -31,6 +31,7 @@ public class RestClient {
 
     public static String deleteMessage(Message message) {
         HttpDelete delete = new HttpDelete(endpoint + "/" + message.getId());
+
         try {
             HttpResponse response = httpClient.execute(delete);
             return EntityUtils.toString(response.getEntity());

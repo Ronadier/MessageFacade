@@ -1,8 +1,10 @@
-package impl;
+package ws;
 
+import ejb.FacadeBean;
 import service.Message;
 import service.MessageFacadeService;
 
+import javax.ejb.EJB;
 import javax.ejb.Stateless;
 import javax.jws.WebService;
 import javax.xml.datatype.XMLGregorianCalendar;
@@ -13,21 +15,25 @@ import java.util.List;
         endpointInterface = "service.MessageFacadeService",
         targetNamespace = "http://service/")
 @Stateless
-public class FacadeBean  implements MessageFacadeService{
+public class MessageFacadeImpl implements MessageFacadeService {
+
+    @EJB
+    FacadeBean bean;
+
     @Override
     public List<Message> getMessagesBySender(String sender) {
-        return new SoapSendRequest().getMessagesBySender(sender);
+        return bean.getMessagesBySender(sender);
     }
     @Override
     public List<Message> getMessagesByDate(XMLGregorianCalendar sendTime) {
-        return new SoapSendRequest().getMessagesByDate(sendTime);
+        return bean.getMessagesByDate(sendTime);
     }
     @Override
     public String deleteMessage(Message message) {
-        return RestClient.deleteMessage(message);
+        return bean.deleteMessage(message);
     }
     @Override
     public String addMessage(Message message) {
-        return RestClient.addMessage(message);
+        return bean.addMessage(message);
     }
 }
